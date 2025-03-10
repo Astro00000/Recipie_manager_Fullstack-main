@@ -10,7 +10,7 @@ const RecipeCard = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/recipes/${id}`)
+      .get(`https://recipiebackend.onrender.com/recipes/${id}`)
       .then((response) => {
         setRecipe(response.data);
       })
