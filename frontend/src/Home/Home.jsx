@@ -12,7 +12,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/recipes/");
+        const response = await axios.get("https://recipiebackend.onrender.com/recipes/");
         setData(Array.isArray(response.data) ? response.data : []); // Ensure data is an array
       } catch (error) {
         console.error("Error fetching recipes:", error);
@@ -29,7 +29,7 @@ export const Home = () => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const response = await axios.get("http://localhost:3000/favorites", {
+        const response = await axios.get("https://recipiebackend.onrender.com/favorites", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -50,7 +50,7 @@ export const Home = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      const response = await axios.post("http://localhost:3000/favorites/toggle", 
+      const response = await axios.post("https://recipiebackend.onrender.com/favorites/toggle", 
           { recipeId }, 
           { headers: { Authorization: `Bearer ${token}` } }
       );
