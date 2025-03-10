@@ -1,0 +1,133 @@
+/* MyRecipes.css */
+
+/* Container styles */
+.my-recipes-container {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .recipe-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Recipe card styles */
+  .recipe-card {
+    width: 100%;
+    max-width: 280px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .recipe-image:hover {
+    opacity: 0.8;
+  }
+  
+  .recipe-card-body {
+    padding: 15px;
+  }
+  
+  .recipe-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-time {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-update {
+    background-color: #007bff;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-update:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Create Recipe Button */
+  .create-recipe-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .btn-create-recipe {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-create-recipe:hover {
+    background-color: #218838;
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-cards-container {
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    .recipe-card {
+      max-width: 100%;
+    }
+  
+    .page-title {
+      font-size: 2rem;
+    }
+  }
+  
