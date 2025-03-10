@@ -56,7 +56,7 @@ function Register() {
     if (checkValidation()) {
       try {
         // Replace with correct backend URL if necessary
-        const response = await axios.post('http://localhost:3000/register', formdata); 
+        const response = await axios.post('https://recipiebackend.onrender.com/register', formdata); 
         console.log("Response:", response.data);
 
         toast.success("Registration Successful!", {
